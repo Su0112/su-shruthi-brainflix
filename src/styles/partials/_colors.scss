@@ -1,0 +1,31 @@
+/*These colors are used for typography,
+components, branding, and are solid
+colors at 100% opacity, unless stated
+otherwise*/
+
+/* PRIMARY COLORS
+
+/*BrainFlix-Black: Primary text color.*/
+$color-dark-pri: #323232;
+
+/*BrainFlix-Blue: Primary CTA color. Active form field outline color.*/
+$color-active-form-pri: #0095ff;
+
+/*Silver: Secondary text color. Text Label color*/
+$color-light-pri: #afafaf;
+
+/*White: Background color. CTA text color */
+$color-plain-pri: #ffffff;
+
+/* SECONDARY COLORS 
+BrainFlix- Black: Video player components */
+$color-videoplayer-sec: #000000;
+
+/*BrainFlix-DarkBlue: CTA hover state color */
+$color-hover-sec: #0065ad;
+
+/*Mercury: Divider line. Form field outline color*/
+$color-divider-form-outline-sec: #e1e1e1;
+
+/* Alabaster: Form field background color */
+$color-formfield-background-sec: #fafafa;

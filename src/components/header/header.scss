@@ -1,0 +1,38 @@
+@use "../../styles/partials/breakpoints";
+@use "../../styles/partials/colors";
+@use "../../styles/partials/fonts";
+
+.header {
+  padding: 1rem;
+  position: absolute;
+
+  &__logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1.5rem;
+  }
+  &__search-box {
+    padding-left: 2rem;
+    width: 80%;
+    background: url("../../assets/Icons/search.svg") no-repeat left;
+    background-position: 0.5rem 0.8rem;
+    background-size: 1rem;
+    border-radius: 0.4rem;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  &__btn {
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+}
+
+.avatar__img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: red;
+  color: red;
+}
