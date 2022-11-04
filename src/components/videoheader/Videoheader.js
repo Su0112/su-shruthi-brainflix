@@ -17,25 +17,28 @@ export default function VideoHeader({ video }) {
   return (
     <main className="details">
       <h1 className="details__heading">{title}</h1>
+      <div class="comments__line"></div>
       <section className="details__info">
         <div className="details__info-left">
-          <p className="details__info-left-channel">{channel}</p>
+          <p className="details__info-left-channel">By {channel}</p>
           <p className="details__info-left-date">{timestamp}</p>
         </div>
         <div className="details__info-right">
           <div className="details__info-right-views">
-            <img className="details__info-right-views-icon" alt="viewicon" />
-            <p className="details__info-right-views-p">{views}</p>
+            <div className="details__info-right-views-icon"></div>
+            <div>
+              <p className="details__info-right-views-p">{views}</p>
+            </div>
           </div>
           <div className="details__info-right-likes">
-            <img className="details__info-right-likes-icon" alt="likesicon" />
+            <div className="details__info-right-likes-icon"></div>
             <p className="details__info-right-likes-p">{likes}</p>
           </div>
         </div>
       </section>
-      <section>
-        <p>{description}</p>
-      </section>
+      <div class="comments__line"></div>
+
+      <p className="description">{description}</p>
     </main>
   );
 }

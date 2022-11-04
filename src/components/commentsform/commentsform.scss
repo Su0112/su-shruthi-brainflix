@@ -1,0 +1,20 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+@use "../../styles/partials/fonts" as *;
+
+.comments__tag {
+  padding: 0 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.form {
+  padding: 1rem;
+}
+
+.form__avatar {
+  background-image: url("../../assets/Images/Mohan-muruge.jpg");
+  background-size: cover;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+}
