@@ -1,25 +1,54 @@
+//react built-in imports
+import { useState } from "react";
+//scss
+import "./app.scss";
+// components
 import Header from "./components/header/Header";
+import Herovideo from "./components/herovideo/Herovideo";
+import Commentsform from "./components/commentsform/Commentsform";
+import Comments from "./components/comments/Comments";
+import Videoheader from "./components/videoheader/Videoheader";
+import Videobar from "./components/videobar/Videobar";
+import Videocard from "./components/videocard/Videocard";
 
-import React from "react";
-//import Comments from "./components/comments/Comments";
-//import Commentscard from "./components/commentscard/Commentscard";
-//import
-//import Video from "./components/video/Video";
-//import Videoheader from "./components/videoheader/Videoheader";
-//import Videolist from "./components/videolist/Videolist";
+//named imports from utils
+//default imports -> does not require curly braces
+//named import-> requires curly beaces
+import getVideos, { getVideoDetails } from "./utils/Utils";
 
-const App = () => {
-  return (
-    <>
-      <Header />
-      {/* <Comments />
-      <Commentscard />
-      <Commentsform />
-      <Video/>
-      <Videoheader/>
-      <Videolist/> */}
-    </>
+export default function App() {
+  const [videoId, setVideoId] = useState(
+    "84e96018-4022-434e-80bf-000ce4cd12b8"
   );
-};
 
-export default App;
+  const [videos, setVideos] = useState(getVideos(videoId));
+  const [videoDetails, setVideoDetails] = useState(getVideoDetails(videoId));
+
+  const handleClick = (event, videoId) => {
+    event.preventDefault();
+    setVideoId(videoId);
+    setVideos(getVideos(videoId));
+    setVideoDetails(getVideoDetails(videoId));
+  };
+
+  return (
+    <div className="app">
+      <Header />
+      <section className="app__container">
+        <Herovideo />
+        <div className="app__container-bottom">
+          <section className="app__container-left">
+            <Videoheader video={videoDetails} />
+            <Commentsform />
+            <Comments />
+          </section>
+
+          <section className="app__container-right">
+            <Videobar videos={videos} onVideoClick={handleClick} />
+            <Videocard />
+          </section>
+        </div>
+      </section>
+    </div>
+  );
+}

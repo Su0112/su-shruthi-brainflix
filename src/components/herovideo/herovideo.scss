@@ -1,0 +1,23 @@
+@use "../../styles/partials/colors" as color;
+.herovideo {
+  width: 100vw;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  &__container {
+    width: 100vw;
+    height: 30rem;
+    //background-color: color.$color-videoplayer-sec;
+    &-video {
+      width: 100%;
+      max-height: 35rem;
+    }
+  }
+  &__wrapper {
+    width: 90%;
+    position: relative;
+    top: -30rem;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+}

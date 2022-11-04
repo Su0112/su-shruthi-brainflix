@@ -1,38 +1,62 @@
-@use "../../styles/partials/breakpoints";
-@use "../../styles/partials/colors";
-@use "../../styles/partials/fonts";
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+@use "../../styles/partials/fonts" as *;
 
 .header {
+  font-family: "Avenir";
   padding: 1rem;
-  position: absolute;
+  width: 100vw;
+  height: 10vh;
 
   &__logo {
-    display: block;
+    height: 30%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
-  &__search-box {
-    padding-left: 2rem;
-    width: 80%;
-    background: url("../../assets/Icons/search.svg") no-repeat left;
-    background-position: 0.5rem 0.8rem;
-    background-size: 1rem;
-    border-radius: 0.4rem;
-    height: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  &__btn {
-    padding: 0.5rem;
+  &__search {
+    height: 30%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    &-box {
+      padding-left: 2rem;
+      width: 80%;
+      background: url("../../assets/Icons/search.svg") no-repeat left;
+      color: color.$color-formfield-background-sec;
+      background-position: 0.5rem 0.8rem;
+      background-size: 1rem;
+      border-radius: 0.4rem;
+      height: 2.5rem;
+      margin-bottom: 1rem;
+      border-color: color.$color-divider-form-outline-sec;
+    }
+  }
+  &__avatar {
+    background: url("../../assets/Images/Mohan-muruge.jpg");
+    background-size: cover;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+  }
+
+  &__container__btn {
+    padding: 0.5rem;
+    width: 90%;
     border-radius: 0.4rem;
+    border-color: none;
+    background: color.$color-activeform-outline-pri;
+    color: color.$color-plain-pri;
+    display: flex;
+    justify-content: start;
+    gap: 4.5rem;
   }
 }
 
-.avatar__img {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border: red;
-  color: red;
-}
+// display: flex;
+//   flex-direction: column;
+//   align-items: center;

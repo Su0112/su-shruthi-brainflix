@@ -1,0 +1,35 @@
+//@use "./partials/index";
+@use "./styles/partials/fonts";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Avenir";
+  line-height: 1.8rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//Tablet and Desktop
+// .app {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   font-size: 0.5rem;
+//   &__container {
+//     display: flex;
+//   }
+//   &__container-left {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
