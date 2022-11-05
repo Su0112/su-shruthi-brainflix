@@ -35,7 +35,7 @@ export default function App() {
     <div className="app">
       <Header />
       <section className="app__container">
-        <Herovideo />
+        <Herovideo videoDetails={videoDetails} />
         <div className="app__container-bottom">
           <section className="app__container-left">
             <Videoheader video={videoDetails} />

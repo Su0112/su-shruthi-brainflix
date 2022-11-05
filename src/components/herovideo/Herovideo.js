@@ -1,11 +1,27 @@
 import React from "react";
 import "./herovideo.scss";
 
-export default function Herovideo({ props }) {
-  //const { video, image } = video;
+export default function Herovideo({ videoDetails }) {
+  const { video, image } = videoDetails;
+  console.log(image);
 
   return (
-    <div className="herovideo__container">
+    <div>
+      <section className="hero">
+        <video
+          classname="hero__video"
+          alt="video"
+          controls
+          src={video}
+          poster={image}
+        ></video>
+        <div className="hero__video-controls"></div>
+      </section>
+    </div>
+  );
+}
+
+/* <div className="herovideo__container">
       <video
         src="true"
         id="84e96018-4022-434e-80bf-000ce4cd12b8"
@@ -23,20 +39,5 @@ export default function Herovideo({ props }) {
         </div>
         <div className="herovideo__fullscreen"></div>
         <div className="herovideo__volume"></div>
-      </section>
-    </div>
-  );
-}
-
-/* <div>
-      <section className="hero">
-        <video
-          classname="hero__video"
-          alt="video"
-          controls
-          src={props.video}
-          poster={props.image}
-        ></video>
-        <div className="hero__video-controls"></div>
       </section>
     </div> */

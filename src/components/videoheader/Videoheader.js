@@ -26,9 +26,8 @@ export default function VideoHeader({ video }) {
         <div className="details__info-right">
           <div className="details__info-right-views">
             <div className="details__info-right-views-icon"></div>
-            <div>
-              <p className="details__info-right-views-p">{views}</p>
-            </div>
+
+            <p className="details__info-right-views-p">{views}</p>
           </div>
           <div className="details__info-right-likes">
             <div className="details__info-right-likes-icon"></div>
