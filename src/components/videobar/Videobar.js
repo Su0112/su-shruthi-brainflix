@@ -8,9 +8,9 @@ export default function Videobar({ videos, onVideoClick }) {
     <aside className="videobar">
       <h3>NEXT VIDEOS</h3>
       {videos.map((video) => (
-        <div className="videobar__img-stack" key={video.id}>
+        <div className="videobar__card" key={video.id}>
           <img
-            className="videobar__img"
+            className="videobar__card-img"
             src={video.image}
             alt={video.title}
             key={video.title + video.id}

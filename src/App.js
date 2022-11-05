@@ -6,7 +6,7 @@ import "./app.scss";
 import Header from "./components/header/Header";
 import Herovideo from "./components/herovideo/Herovideo";
 import Commentsform from "./components/commentsform/Commentsform";
-import Comments from "./components/comments/Comments";
+
 import Videoheader from "./components/videoheader/Videoheader";
 import Videobar from "./components/videobar/Videobar";
 
@@ -39,7 +39,6 @@ export default function App() {
           <section className="app__container-left">
             <Videoheader video={videoDetails} />
             <Commentsform videoDetails={videoDetails} />
-            <Comments /> {/*I am not sure*/}
           </section>
 
           <section className="app__container-right">

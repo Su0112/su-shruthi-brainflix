@@ -13,6 +13,10 @@ export const getVideoDetails = (videoId) => {
   return videoDetailsvideosBrainFlix.find((video) => video.id === videoId);
 };
 
+export const convertTime = (timeStamp) => {
+  return new Date(timeStamp).toLocaleDateString();
+};
+
 //default export
 //by default you can only have one "deafult export" from your js file
 export default getVideos;

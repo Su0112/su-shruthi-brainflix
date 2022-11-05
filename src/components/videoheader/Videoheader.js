@@ -1,6 +1,6 @@
 import React from "react";
 import "./videoheader.scss";
-
+import { convertTime } from "../../utils/Utils";
 export default function VideoHeader({ video }) {
   const {
     title,
@@ -21,7 +21,7 @@ export default function VideoHeader({ video }) {
       <section className="details__info">
         <div className="details__info-left">
           <p className="details__info-left-channel">By {channel}</p>
-          <p className="details__info-left-date">{timestamp}</p>
+          <p className="details__info-left-date">{convertTime(timestamp)}</p>
         </div>
         <div className="details__info-right">
           <div className="details__info-right-views">
