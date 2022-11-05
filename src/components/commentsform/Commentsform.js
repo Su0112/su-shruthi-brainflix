@@ -1,10 +1,10 @@
 import React from "react";
 import "./commentsform.scss";
 //number of comments changes depending on the videos
-const Commentsform = () => {
+export default function Commentsform({ videoDetails }) {
   return (
     <section>
-      <p className="comments__tag">3 Comments</p>
+      <p className="comments__tag">{videoDetails.comments.length} Comments</p>
       <div className="form">
         <div className="form__avatar"></div>
         <form className="form__container">
@@ -26,9 +26,7 @@ const Commentsform = () => {
       <div class="comments__line"></div>
     </section>
   );
-};
-
-export default Commentsform;
+}
 
 /*<input
             class="comments__form-button-input"

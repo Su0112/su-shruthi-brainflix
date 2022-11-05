@@ -3,7 +3,7 @@ import "./herovideo.scss";
 
 export default function Herovideo({ videoDetails }) {
   const { image } = videoDetails;
-  console.log(image);
+  //console.log(image);
 
   return (
     <section className="hero">

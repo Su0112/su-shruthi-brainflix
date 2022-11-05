@@ -39,7 +39,7 @@ export default function App() {
         <div className="app__container-bottom">
           <section className="app__container-left">
             <Videoheader video={videoDetails} />
-            <Commentsform />
+            <Commentsform videoDetails={videoDetails} />
             <Comments />
           </section>
 
