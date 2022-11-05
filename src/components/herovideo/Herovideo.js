@@ -2,22 +2,19 @@ import React from "react";
 import "./herovideo.scss";
 
 export default function Herovideo({ videoDetails }) {
-  const { video, image } = videoDetails;
+  const { image } = videoDetails;
   console.log(image);
 
   return (
-    <div>
-      <section className="hero">
-        <video
-          classname="hero__video"
-          alt="video"
-          controls
-          src={video}
-          poster={image}
-        ></video>
-        <div className="hero__video-controls"></div>
-      </section>
-    </div>
+    <section className="hero">
+      <video
+        className="hero__video"
+        alt="video"
+        controls
+        poster={image}
+      ></video>
+      <div className="hero__video-controls"></div>
+    </section>
   );
 }
 
