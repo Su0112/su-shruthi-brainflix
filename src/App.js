@@ -9,7 +9,6 @@ import Commentsform from "./components/commentsform/Commentsform";
 import Comments from "./components/comments/Comments";
 import Videoheader from "./components/videoheader/Videoheader";
 import Videobar from "./components/videobar/Videobar";
-import Videocard from "./components/videocard/Videocard";
 
 //named imports from utils
 //default imports -> does not require curly braces
@@ -40,12 +39,11 @@ export default function App() {
           <section className="app__container-left">
             <Videoheader video={videoDetails} />
             <Commentsform videoDetails={videoDetails} />
-            <Comments />
+            <Comments /> {/*I am not sure*/}
           </section>
 
           <section className="app__container-right">
             <Videobar videos={videos} onVideoClick={handleClick} />
-            <Videocard />
           </section>
         </div>
       </section>
