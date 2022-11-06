@@ -6,7 +6,7 @@ import { convertTime } from "../../utils/Utils";
 export default function Commentsform({ videoDetails }) {
   return (
     <section>
-      <p className="comments__tag">{videoDetails.comments.length} Comments</p>
+      <p className="form__tag">{videoDetails.comments.length} Comments</p>
       <div className="form">
         <div className="form__avatar"></div>
         <form className="form__container">
@@ -39,10 +39,18 @@ export default function Commentsform({ videoDetails }) {
           {videoDetails.comments.map((comments) => (
             <section key={comments.name}>
               <hr className="comments__divider" />
-              <div className="comments__avatar--empty"></div>
-              <p>{comments.name}</p>
-              <p>{convertTime(comments.timestamp)}</p>
-              <p>{comments.comment}</p>
+              <div className="comments__details">
+                <div className="comments__avatar"></div>
+                <div className="comments__description">
+                  <div className="comments__name-date">
+                    <p className="comments__name">{comments.name}</p>
+                    <p className="comments__date">
+                      {convertTime(comments.timestamp)}
+                    </p>
+                  </div>
+                  <p className="comments__comment">{comments.comment}</p>
+                </div>
+              </div>
             </section>
           ))}
         </section>

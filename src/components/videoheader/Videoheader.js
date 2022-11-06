@@ -2,15 +2,7 @@ import React from "react";
 import "./videoheader.scss";
 import { convertTime } from "../../utils/Utils";
 export default function VideoHeader({ video }) {
-  const {
-    title,
-    channel,
-
-    description,
-    views,
-    likes,
-    timestamp,
-  } = video;
+  const { title, channel, description, views, likes, timestamp } = video;
   return (
     <main className="details">
       <h1 className="details__heading">{title}</h1>
@@ -32,9 +24,9 @@ export default function VideoHeader({ video }) {
           </div>
         </div>
       </section>
-      <div class="comments__line"></div>
+      <div class="deatils__comments__line"></div>
 
-      <p className="description">{description}</p>
+      <p className="details__description">{description}</p>
     </main>
   );
 }

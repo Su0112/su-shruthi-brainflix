@@ -1,10 +1,11 @@
 @use "../../styles/partials/breakpoints" as breakpoint;
 @use "../../styles/partials/colors" as color;
 @use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixin" as mixin;
 
-.comments__tag {
+.form__tag {
+  @include mixin.small-sub-header;
   padding: 0 1rem;
-  font-weight: 600;
   margin: 0;
 }
 .form {
@@ -32,6 +33,38 @@
   }
 }
 
-.comments__container {
-  padding: 1rem;
+.comments {
+  &__container {
+    @include mixin.small-body-copy;
+    padding: 1rem;
+  }
+  &__avatar {
+    background-color: color.$color-divider-form-outline-sec;
+    background-size: cover;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  &__details {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  &__name {
+    @include mixin.small-sub-header;
+    margin-top: 0.5rem;
+  }
+  &__name-date {
+    margin-top: 0;
+    display: flex;
+    justify-content: flex;
+    gap: 3rem;
+  }
+  &__date {
+    margin-top: 0.5rem;
+  }
+  &__comment {
+    margin-top: 0;
+  }
 }

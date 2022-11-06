@@ -1,54 +1,59 @@
 @use "../../styles/partials/breakpoints" as breakpoint;
 @use "../../styles/partials/colors" as color;
 @use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixin" as mixin;
 
 .details {
   padding: 1rem;
-}
-.details__info {
-  display: flex;
-  justify-content: space-between;
-}
-.details__info-left {
-  background-color: blue;
-  width: 50%;
-}
-.details__info-left-channel {
-  font-weight: 600;
-}
-.details__info-right {
-  background-color: yellow;
-  width: 50%;
-}
-.details__info-right-views {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.details__info-right-views-icon {
-  background-image: url("../../assets/Icons/views.svg");
-  background-size: cover;
-  width: 2.2rem;
-  height: 1.5rem;
-}
-.details__info-right-likes {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.details__info-right-likes-icon {
-  background-image: url("../../assets/Icons/likes.svg");
-  background-size: cover;
-  width: 1.6rem;
-  height: 1.5rem;
-}
-.comments__line {
-  border: none;
-  border-bottom: 0.1rem solid red;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.description {
-  font-size: 0.85rem;
-  line-height: 1.5rem;
+  &__heading {
+    @include mixin.small-page-header;
+    margin-top: 0.25rem;
+    margin-bottom: 0.8rem;
+  }
+  &__info {
+    @include mixin.small-body-copy;
+    display: flex;
+    justify-content: space-between;
+    &-left {
+      width: 50%;
+      &-channel {
+        font-weight: 600;
+      }
+    }
+    &-right {
+      width: 50%;
+      &-views {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &-icon {
+          background-image: url("../../assets/Icons/views.svg");
+          background-size: cover;
+          width: 2.2rem;
+          height: 1.5rem;
+        }
+      }
+      &-likes {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &-icon {
+          background-image: url("../../assets/Icons/likes.svg");
+          background-size: cover;
+          width: 1.6rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+  &__comments__line {
+    border: none;
+    border-bottom: 0.1rem solid color.$color-divider-form-outline-sec;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &__description {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
 }
