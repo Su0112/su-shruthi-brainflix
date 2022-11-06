@@ -5,15 +5,20 @@
 .header {
   font-family: "Avenir";
   padding: 1rem;
-  width: 100vw;
-  height: 27vh;
+  padding-top: 0.75rem;
+  width: 100%;
+  height: 10rem;
+  max-height: 216px;
 
-  &__logo {
+  &__container {
     height: 30%;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 1rem;
+    &__logo {
+      height: 100%;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-bottom: 1rem;
+    }
   }
   &__search {
     height: 30%;
@@ -31,8 +36,8 @@
       background-position: 0.5rem 0.8rem;
       background-size: 1rem;
       border-radius: 0.4rem;
-      height: 2.5rem;
-      margin-bottom: 1rem;
+      height: 100%;
+      // margin-bottom: 1rem      ;
       border-color: color.$color-divider-form-outline-sec;
     }
   }
@@ -43,17 +48,32 @@
     height: 2.3rem;
     border-radius: 50%;
   }
-
-  &__container__btn {
-    padding: 0.5rem;
-    width: 90%;
-    border-radius: 0.4rem;
-    border-color: none;
-    background: color.$color-activeform-outline-pri;
-    color: color.$color-plain-pri;
-    display: flex;
-    justify-content: start;
-    gap: 4.5rem;
+  &__container {
+    &__btn {
+      height: 100%;
+      padding-top: 1rem;
+    }
+    &__btns {
+      // padding-top: 1rem ;
+      padding: 0.5rem;
+      width: 100%;
+      border-radius: 0.4rem;
+      border-color: none;
+      background: color.$color-activeform-outline-pri;
+      color: color.$color-plain-pri;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 5rem;
+    }
+  }
+  .header__avatar-upload {
+    display: none;
+    background: url("../../assets/Images/Mohan-muruge.jpg");
+    background-size: cover;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
   }
 }
 

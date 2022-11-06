@@ -5,14 +5,11 @@ export default function VideoHeader({ video }) {
   const {
     title,
     channel,
-    //image,
+
     description,
     views,
     likes,
-    //duration,
-    //video,
     timestamp,
-    //comments,
   } = video;
   return (
     <main className="details">

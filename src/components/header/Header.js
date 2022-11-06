@@ -10,7 +10,13 @@ const Header = (props) => {
   return (
     <section>
       <header className="header">
-        <img className="header__logo" src={Logo} alt="BrainFlix Logo" />
+        <div className="header__container">
+          <img
+            className="header__container__logo"
+            src={Logo}
+            alt="BrainFlix Logo"
+          />
+        </div>
         <div className="header__search">
           <input
             className="header__search-box"
@@ -19,15 +25,16 @@ const Header = (props) => {
           />
           <div className="header__avatar"></div>
         </div>
-        <div className="header__container">
-          <button className="header__container__btn" href="">
+        <div className="header__container__btn">
+          <button className="header__container__btns" href="">
             <img
-              className="header__container__btn-img"
+              className="header__container__btns-img"
               alt="upload"
               src={Button}
             />
             UPLOAD
           </button>
+          <div className="header__avatar-upload"></div>
         </div>
       </header>
     </section>

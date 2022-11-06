@@ -10,33 +10,37 @@
   justify-content: space-between;
 }
 .details__info-left {
-  background-color: green;
+  background-color: blue;
+  width: 50%;
 }
 .details__info-left-channel {
   font-weight: 600;
 }
 .details__info-right {
   background-color: yellow;
+  width: 50%;
 }
 .details__info-right-views {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .details__info-right-views-icon {
   background-image: url("../../assets/Icons/views.svg");
   background-size: cover;
-  width: 1rem;
-  height: 1rem;
+  width: 2.2rem;
+  height: 1.5rem;
 }
 .details__info-right-likes {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .details__info-right-likes-icon {
   background-image: url("../../assets/Icons/likes.svg");
   background-size: cover;
-  width: 1rem;
-  height: 1rem;
+  width: 1.6rem;
+  height: 1.5rem;
 }
 .comments__line {
   border: none;
