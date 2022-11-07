@@ -1,11 +1,22 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixin" as mixin;
 .videobar {
+  color: color.$color-text-pri;
   display: flex;
   flex-direction: column;
   width: 100vw;
   margin: 0;
-  height: 50vh;
+  height: 30vh;
   //overflow: scroll;
   padding: 1rem;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    @include mixin.small-section-header;
+    color: color.$color-textlabel-pri;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -22,15 +33,39 @@
       max-width: 50%;
     }
   }
+  &__description {
+    font-size: 0.725rem;
+    line-height: 1rem;
+    padding-top: 0.25rem;
+    &-title {
+      font-weight: 600;
+      margin: 0;
+      @include mixin.small-sub-header;
+    }
+    &-channel {
+      @include mixin.small-body-copy;
+    }
+  }
 }
 
-.videobar__description {
-  font-size: 0.725rem;
-  line-height: 1rem;
-  padding-top: 0.25rem;
-}
-
-.videobar__description-title {
-  font-weight: 600;
-  margin: 0;
+//Breakpoints for tablet
+@include breakpoint.medium {
+  .videobar {
+    padding-left: 2.3rem;
+    padding-top: 0;
+    &__card {
+      display: inline-flex;
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+    }
+    &__description {
+      width: 24.55%;
+      &-title {
+        @include mixin.med-lar-sub-header;
+      }
+      &-channel {
+        @include mixin.med-lar-body-copy;
+      }
+    }
+  }
 }

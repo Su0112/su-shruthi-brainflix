@@ -5,55 +5,132 @@
 
 .details {
   padding: 1rem;
+  padding-top: 0.75rem;
   &__heading {
     @include mixin.small-page-header;
     margin-top: 0.25rem;
     margin-bottom: 0.8rem;
-  }
-  &__info {
-    @include mixin.small-body-copy;
-    display: flex;
-    justify-content: space-between;
-    &-left {
-      width: 50%;
-      &-channel {
-        font-weight: 600;
-      }
-    }
-    &-right {
-      width: 50%;
-      &-views {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        &-icon {
-          background-image: url("../../assets/Icons/views.svg");
-          background-size: cover;
-          width: 2.2rem;
-          height: 1.5rem;
-        }
-      }
-      &-likes {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        &-icon {
-          background-image: url("../../assets/Icons/likes.svg");
-          background-size: cover;
-          width: 1.6rem;
-          height: 1.5rem;
-        }
-      }
-    }
+    color: color.$color-text-pri;
   }
   &__comments__line {
     border: none;
     border-bottom: 0.1rem solid color.$color-divider-form-outline-sec;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
+
+  &__info {
+    @include mixin.small-body-copy;
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      width: 50%;
+      height: 50%;
+      &-channel {
+        font-weight: 600;
+        color: color.$color-text-pri;
+      }
+      &-date {
+        padding-top: 0.25rem;
+        color: color.$color-textlabel-pri;
+      }
+    }
+    &-right {
+      width: 50%;
+      height: 50%;
+      color: color.$color-textlabel-pri;
+      &-views {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+
+        &-icon {
+          background-image: url("../../assets/Icons/views.svg");
+          background-size: cover;
+          width: 1.4rem;
+          height: 0.95rem;
+        }
+      }
+      &-likes {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+
+        &-icon {
+          background-image: url("../../assets/Icons/likes.svg");
+          background-size: cover;
+          width: 1.1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+
   &__description {
-    font-size: 0.85rem;
-    line-height: 1.5rem;
+    @include mixin.small-body-copy;
+    color: color.$color-text-pri;
+  }
+}
+
+//Breakpoints for tablet
+@include breakpoint.medium {
+  .details {
+    padding: 1.25rem 2rem 1rem 2rem;
+
+    &__heading {
+      @include mixin.med-lar-page-header;
+      margin-top: 0.25rem;
+      margin-bottom: 0.8rem;
+    }
+    &__comments__line-active {
+      display: none;
+    }
+
+    &__info {
+      @include mixin.med-lar-body-copy;
+      display: flex;
+      justify-content: space-between;
+
+      &-left {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        &-channel {
+          @include mixin.med-lar-sub-header;
+          color: color.$color-text-pri;
+        }
+        &-date {
+          padding-top: 0.25rem;
+          color: color.$color-textlabel-pri;
+          @include mixin.med-lar-body-copy;
+        }
+      }
+      &-right {
+        width: 50%;
+        height: 50%;
+        display: flex;
+
+        @include mixin.med-lar-body-copy;
+        &-views {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 0.75rem;
+          width: 100%;
+          position: relative;
+          right: -8.5rem;
+        }
+      }
+    }
+
+    &__description {
+      @include mixin.med-lar-body-copy;
+    }
   }
 }

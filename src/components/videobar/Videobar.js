@@ -6,7 +6,7 @@ import "./videobar.scss";
 export default function Videobar({ videos, onVideoClick }) {
   return (
     <aside className="videobar">
-      <h3>NEXT VIDEOS</h3>
+      <h3 className="videobar__title">NEXT VIDEOS</h3>
       {videos.map((video) => (
         <div className="videobar__card" key={video.id}>
           <img

@@ -14,20 +14,16 @@ export default function Commentsform({ videoDetails }) {
             <label className="form__container-section">
               JOIN THE CONVERSATION
             </label>
-            <input
+            <textarea
               type="text"
               className="form__container-text"
               name="formName"
               placeholder="Add a new comment"
               required
-            />
+            ></textarea>
           </div>
           <button className="form__container-btn">
-            <img
-              className="header__container__btn-img"
-              alt="upload"
-              src={Btn}
-            />
+            <img className="header__container-btn-img" alt="upload" src={Btn} />
             COMMENT
           </button>
         </form>
@@ -38,7 +34,6 @@ export default function Commentsform({ videoDetails }) {
         <section className="comments__container">
           {videoDetails.comments.map((comments) => (
             <section key={comments.name}>
-              <hr className="comments__divider" />
               <div className="comments__details">
                 <div className="comments__avatar"></div>
                 <div className="comments__description">
@@ -51,12 +46,13 @@ export default function Commentsform({ videoDetails }) {
                   <p className="comments__comment">{comments.comment}</p>
                 </div>
               </div>
+              <div className="comments__line"></div>
             </section>
           ))}
         </section>
       ) : (
         <div>
-          <p className="relatives__no-data">No Comments</p>
+          <p className="comments__no-data">No Comments</p>
         </div>
       )}
     </section>

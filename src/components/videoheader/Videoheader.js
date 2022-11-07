@@ -6,7 +6,7 @@ export default function VideoHeader({ video }) {
   return (
     <main className="details">
       <h1 className="details__heading">{title}</h1>
-      <div class="comments__line"></div>
+      <div className="details__comments__line details__comments__line-active"></div>
       <section className="details__info">
         <div className="details__info-left">
           <p className="details__info-left-channel">By {channel}</p>
@@ -24,8 +24,7 @@ export default function VideoHeader({ video }) {
           </div>
         </div>
       </section>
-      <div class="deatils__comments__line"></div>
-
+      <div className="details__comments__line"></div>
       <p className="details__description">{description}</p>
     </main>
   );
