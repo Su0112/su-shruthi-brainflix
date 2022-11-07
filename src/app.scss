@@ -1,0 +1,31 @@
+//@use "./partials/index";
+@use "./styles/partials/fonts";
+@use "./styles/partials/mixin" as mixin;
+@use "./styles/partials/breakpoints" as breakpoint;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Avenir";
+  line-height: 1.8rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//Breakpoints for desktop
+@include breakpoint.large {
+  .app__container-bottom {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

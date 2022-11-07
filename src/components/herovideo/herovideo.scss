@@ -1,0 +1,39 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixin" as mixin;
+.hero {
+  width: 100vw;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: color.$color-videoplayer-sec;
+  &__video {
+    width: 100vw;
+    max-height: 35rem;
+    aspect-ratio: 16/9;
+  }
+}
+
+//Breakpoints for tablet
+@include breakpoint.medium {
+  .hero {
+    width: 100vw;
+    height: 54vh;
+    &__video {
+      max-height: 100%;
+    }
+  }
+}
+//desktop
+//Breakpoints for tablet
+@include breakpoint.large {
+  .hero {
+    width: 100vw;
+    height: 64vh;
+
+    &__video {
+      max-height: 100%;
+      aspect-ratio: 16/9;
+    }
+  }
+}
