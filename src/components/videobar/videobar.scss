@@ -69,3 +69,19 @@
     }
   }
 }
+
+//Breakpoints for desktop
+@include breakpoint.large {
+  .videobar {
+    width: 35vw;
+    padding-top: 2rem;
+
+    &__card {
+      display: inline-flex;
+      justify-content: flex-start;
+    }
+    &__description {
+      width: 41%;
+    }
+  }
+}

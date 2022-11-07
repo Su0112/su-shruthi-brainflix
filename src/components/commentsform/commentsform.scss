@@ -3,6 +3,7 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixin" as mixin;
 
+//mobile breakpoint scss
 .form__tag {
   @include mixin.small-sub-header;
   padding: 0 1rem;
@@ -157,6 +158,52 @@
 
   .comments__date {
     padding-left: 7rem;
+  }
+  .comments__name-date {
+    justify-content: space-between;
+  }
+}
+//Breakpoints for desktop
+@include breakpoint.large {
+  .form1 {
+    padding-right: 1rem;
+    padding-left: 7rem;
+  }
+  .form {
+    &__avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    &__tag {
+      @include mixin.med-lar-sub-header;
+    }
+    &__container {
+      display: flex;
+      justify-content: row;
+      align-items: center;
+      gap: 2rem;
+      height: 12%;
+      width: 96%;
+      &-main {
+        width: 150%;
+      }
+      &-btn {
+        border-radius: 0.15rem;
+      }
+      &-text {
+        height: 20%;
+        width: 105%;
+        padding: 1rem 0 0 1rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .header__container-btn-img {
+    transform: scale(0.8, 0.8);
+    text-align: start;
+  }
+  .comments__date {
+    padding-left: 6rem;
   }
   .comments__name-date {
     justify-content: space-between;

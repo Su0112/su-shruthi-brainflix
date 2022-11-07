@@ -5,7 +5,7 @@ import { convertTime } from "../../utils/Utils";
 //number of comments changes depending on the videos
 export default function Commentsform({ videoDetails }) {
   return (
-    <section>
+    <section className="form1">
       <p className="form__tag">{videoDetails.comments.length} Comments</p>
       <div className="form">
         <div className="form__avatar"></div>

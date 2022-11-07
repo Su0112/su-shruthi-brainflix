@@ -8,7 +8,7 @@ import React from "react";
 
 const Header = (props) => {
   return (
-    <section>
+    <section className="header1">
       <header className="header">
         <div className="header__container">
           <img

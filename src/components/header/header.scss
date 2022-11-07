@@ -140,3 +140,47 @@
     transform: scale(0.8, 0.8);
   }
 }
+//Breakpoints for desktop
+@include breakpoint.large {
+  .header1 {
+    width: 100vw;
+    height: 13vh;
+  }
+  .header {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 12vh;
+    padding: 0 12rem 0 10rem;
+    margin-bottom: 0.1rem;
+    max-height: 3rem;
+    position: relative;
+    top: 2rem;
+
+    &__container__logo {
+      width: 7rem;
+      height: 7rem;
+      position: relative;
+      top: -3rem;
+      right: 24rem;
+    }
+    &__search {
+      width: 32%;
+      height: 80%;
+    }
+    &__container__btn {
+      width: 17%;
+      padding-top: 0;
+    }
+    &__container__btns {
+      height: 2.5rem;
+      &-img {
+        transform: scale(0.8, 0.8);
+      }
+    }
+    &__avatar {
+      position: relative;
+      right: -14rem;
+    }
+  }
+}

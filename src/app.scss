@@ -1,5 +1,7 @@
 //@use "./partials/index";
 @use "./styles/partials/fonts";
+@use "./styles/partials/mixin" as mixin;
+@use "./styles/partials/breakpoints" as breakpoint;
 
 html,
 body {
@@ -19,17 +21,11 @@ body {
   box-sizing: inherit;
 }
 
-//Tablet and Desktop
-// .app {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   font-size: 0.5rem;
-//   &__container {
-//     display: flex;
-//   }
-//   &__container-left {
-//     display: flex;
-//     flex-direction: column;
-//   }
-// }
+//Breakpoints for desktop
+@include breakpoint.large {
+  .app__container-bottom {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

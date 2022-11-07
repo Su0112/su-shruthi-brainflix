@@ -134,3 +134,38 @@
     }
   }
 }
+//Breakpoints for desktop
+@include breakpoint.large {
+  .details {
+    padding: 1.25rem 2rem 1rem 8rem;
+    &__heading {
+      @include mixin.med-lar-page-header;
+    }
+    &__comments__line-active {
+      display: none;
+    }
+    &__info-left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    &__info-right {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      &-views {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+        position: relative;
+        right: -8.5rem;
+      }
+    }
+    &__description {
+      @include mixin.med-lar-body-copy;
+    }
+  }
+}
