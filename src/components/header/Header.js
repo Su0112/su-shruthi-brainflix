@@ -8,36 +8,43 @@ import React from "react";
 
 const Header = (props) => {
   return (
-    <section className="header1">
-      <header className="header">
-        <div className="header__container">
+    <header className="header">
+      <div className="header__container">
+        <a href="../../App.js" className="header__link">
           <img
             className="header__container__logo"
             src={Logo}
             alt="BrainFlix Logo"
           />
-        </div>
+        </a>
+      </div>
+
+      <div className="header__container-nav">
         <div className="header__search">
-          <input
-            className="header__search-box"
-            type="text"
-            placeholder="Search"
-          />
+          <div className="header__search-icon">
+            <input
+              className="header__search-box"
+              type="text"
+              placeholder="Search"
+            />
+          </div>
           <div className="header__avatar"></div>
         </div>
-        <div className="header__container__btn">
-          <button className="header__container__btns" href="">
-            <img
-              className="header__container__btns-img"
-              alt="upload"
-              src={Button}
-            />
-            UPLOAD
-          </button>
-          <div className="header__avatar-upload"></div>
+        <div className="header__container-med">
+          <div className="header__container__btn">
+            <button className="header__container__btns">
+              <img
+                className="header__container__btns-img"
+                alt="upload"
+                src={Button}
+              />
+              UPLOAD
+            </button>
+            <div className="header__avatar-upload"></div>
+          </div>
         </div>
-      </header>
-    </section>
+      </div>
+    </header>
   );
 };
 
