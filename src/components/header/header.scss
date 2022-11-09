@@ -6,41 +6,54 @@
 .header {
   font-family: "Avenir";
   padding: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 1.5rem;
-  width: 100%;
-  height: 10rem;
-  max-height: 216px;
+
   &__container {
-    height: 30%;
+    display: flex;
+    justify-content: center;
     &__logo {
-      height: 100%;
-      width: 100%;
-      margin-right: auto;
-      margin-left: auto;
-      padding-bottom: 1rem;
+      max-height: 1.5rem;
+      max-width: 7.5rem;
     }
   }
-  &__search {
-    height: 30%;
-    width: 100%;
+  &__container-nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  }
+  &__search {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 1rem;
+
     &-box {
-      padding-left: 2rem;
-      width: 80%;
       background: url("../../assets/Icons/search.svg") no-repeat left;
+      background-position: 0.625rem;
       background-color: color.$color-formfield-background-sec;
       border: 1px solid color.$color-divider-form-outline-sec;
-
-      background-position: 0.5rem 0.8rem;
       background-size: 1rem;
-      border-radius: 0.4rem;
-      height: 100%;
-      // margin-bottom: 1rem      ;
-      border-color: color.$color-divider-form-outline-sec;
+      border-radius: 0.25rem;
+      width: 15rem;
+      max-width: 95%;
+      padding: 0.75rem;
+      padding-left: 2.25rem;
+    }
+  }
+  &__container {
+    &__btn {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      display: flex;
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      gap: 30%;
+      padding-top: 0.75rem;
+      padding-bottom: 0.5rem;
+      border: 1px solid color.$color-activeform-outline-pri;
+      background: color.$color-activeform-outline-pri;
+      color: color.$color-plain-pri;
+      border-radius: 0.25rem;
     }
   }
   &__avatar {
@@ -50,137 +63,87 @@
     height: 2.3rem;
     border-radius: 50%;
   }
-  &__container {
-    &__btn {
-      height: 100%;
-      padding-top: 1rem;
-    }
-    &__btns {
-      // padding-top: 1rem ;
-      padding: 0.5rem;
-      width: 100%;
-      border-radius: 0.4rem;
-      border: 1px solid color.$color-activeform-outline-pri;
-      background: color.$color-activeform-outline-pri;
-      color: color.$color-plain-pri;
+
+  &__avatar-upload {
+    display: none;
+  }
+}
+//Breakpoints for tablet
+@include breakpoint.medium {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.25rem;
+
+    &__container-nav {
       display: flex;
-      justify-content: start;
+      flex-direction: row;
       align-items: center;
-      gap: 5rem;
-      height: 38%;
-      @include mixin.small-labels-buttons;
+      width: 70%;
+      gap: 1rem;
+    }
+    &__container__btn {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 1.25rem;
+    }
+    &__container__btns {
+      width: 11rem;
+      padding-bottom: 0.6rem;
+      gap: 2.2rem;
+    }
+    &__container-med {
+      padding-bottom: 1rem;
     }
   }
-  .header__avatar-upload {
+  .header__avatar {
     display: none;
-    background: url("../../assets/Images/Mohan-muruge.jpg");
+  }
+  .header__avatar-upload {
+    display: inline;
+    background-image: url("../../assets/Images/Mohan-muruge.jpg");
     background-size: cover;
     width: 2.3rem;
     height: 2.3rem;
     border-radius: 50%;
   }
 }
-//Breakpoints for tablet
-@include breakpoint.medium {
+//Breakpoints for desktop
+@include breakpoint.large {
   .header {
-    width: 100%;
-    height: 5rem;
+    padding: 1rem 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &__container {
-      height: 100%;
-      &__logo {
-        height: 7rem;
-        width: 7rem;
-        padding-bottom: 1rem;
-        position: relative;
-        top: -1.25rem;
-        right: -1.25rem;
-      }
-    }
-    &__search {
-      position: relative;
-      right: -7rem;
-
-      &-box {
-        margin-top: 1rem;
-        width: 55%;
-        height: 2.5rem;
-        @include mixin.med-lar-body-copy;
-      }
-    }
-    &__avatar {
-      position: relative;
-      top: 0.5rem;
-      right: -12.5rem;
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-    &__container {
-      &__btn {
-        height: 5rem;
-        width: 20rem;
-        padding-top: 1rem;
-        position: relative;
-        top: 1rem;
-        right: 4rem;
-      }
-      &__btns {
-        width: 90%;
-        border-radius: 0.15rem;
-        height: 58%;
-        gap: 2rem;
-        @include mixin.med-lar-labels-buttons;
-      }
-    }
-  }
-  .header__container__btns-img {
-    transform: scale(0.8, 0.8);
-  }
-}
-//Breakpoints for desktop
-@include breakpoint.large {
-  .header1 {
-    width: 100vw;
-    height: 13vh;
-  }
-  .header {
-    display: inline-flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 12vh;
-    padding: 0 12rem 0 10rem;
-    margin-bottom: 0.1rem;
-    max-height: 3rem;
-    position: relative;
-    top: 2rem;
-
-    &__container__logo {
-      width: 7rem;
-      height: 7rem;
-      position: relative;
-      top: -3rem;
-      right: 24rem;
-    }
-    &__search {
-      width: 32%;
-      height: 80%;
+    &__container-nav {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+      gap: 1rem;
     }
     &__container__btn {
-      width: 17%;
-      padding-top: 0;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 1.25rem;
     }
     &__container__btns {
-      height: 2.5rem;
-      &-img {
-        transform: scale(0.8, 0.8);
-      }
+      width: 11rem;
+    }
+    &__container-med {
+      padding-bottom: 1rem;
     }
     &__avatar {
-      position: relative;
-      right: -14rem;
+      display: none;
+      &-upload {
+        display: inline;
+        background-image: url("../../assets/Images/Mohan-muruge.jpg");
+        background-size: cover;
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 50%;
+      }
     }
   }
 }
