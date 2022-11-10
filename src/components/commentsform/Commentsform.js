@@ -28,8 +28,8 @@ export default function Commentsform({ videoDetails }) {
           </button>
         </form>
       </div>
-      <div class="comments__line"></div>
 
+      <div class="comments__line"></div>
       {videoDetails.comments.length > 0 ? (
         <section className="comments__container">
           {videoDetails.comments.map((comments) => (
