@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //scss
-import "./app.scss";
-// components
-import Home from "./Home";
+//import "./app.scss";
+
+import Home from "./page/home/Home";
 import Upload from "./page/videoUpload/VideoUpload";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:videoId" element={<Home />} />
-        <Route path="/upload" element={<Upload />} />
+        <Route path=":videoId" element={<Home />} />
+        <Route path="upload" element={<Upload />} />
       </Routes>
     </BrowserRouter>
   );

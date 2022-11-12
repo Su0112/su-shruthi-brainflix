@@ -4,9 +4,10 @@ import Btn from "../../assets/Icons/add_comment.svg";
 import { convertTime } from "../../utils/Utils";
 //number of comments changes depending on the videos
 export default function Commentsform({ videoDetails }) {
+  //console.log(videoDetails);
   return (
     <section className="form1">
-      <p className="form__tag">{videoDetails.comments.length} Comments</p>
+      <p className="form__tag">{videoDetails?.comments.length} Comments</p>
       <div className="form">
         <div className="form__avatar"></div>
         <form className="form__container">
@@ -29,8 +30,8 @@ export default function Commentsform({ videoDetails }) {
         </form>
       </div>
 
-      <div class="comments__line"></div>
-      {videoDetails.comments.length > 0 ? (
+      <div className="comments__line"></div>
+      {videoDetails?.comments.length > 0 ? (
         <section className="comments__container">
           {videoDetails.comments.map((comments) => (
             <section key={comments.name}>
@@ -58,3 +59,5 @@ export default function Commentsform({ videoDetails }) {
     </section>
   );
 }
+
+//useEffect

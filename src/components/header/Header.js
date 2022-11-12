@@ -11,7 +11,7 @@ const Header = (props) => {
   return (
     <section className="header1">
       <header className="header">
-        <Link to="../../Home.js">
+        <Link to="/">
           <div className="header__container">
             <img
               className="header__container__logo"
@@ -29,7 +29,7 @@ const Header = (props) => {
           <div className="header__avatar"></div>
         </div>
         <div className="header__container__btn">
-          <Link to="../../page/videoUpload/VideoUpload.js">
+          <Link to="/upload">
             <button className="header__container__btns" href="">
               <img
                 className="header__container__btns-img"
