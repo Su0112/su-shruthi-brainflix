@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./page/home/Home";
 import Upload from "./page/videoUpload/VideoUpload";
+import Publish from "./page/publishPage/PublishPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path=":videoId" element={<Home />} />
         <Route path="upload" element={<Upload />} />
+        <Route path="publish" element={<Publish />} />
       </Routes>
     </BrowserRouter>
   );

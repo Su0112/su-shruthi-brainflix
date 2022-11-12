@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/header/Header";
 import Button from "../../assets/Icons/upload.svg";
+import { Link } from "react-router-dom";
 
 function VideoUpload() {
   return (
@@ -49,10 +50,16 @@ function VideoUpload() {
         <div className="publish">
           <div className="publish__cancel">CANCEL</div>
           <div className="publish__button">
-            <button className="publish__button-box">
-              <img className="publish__button-icon" alt="upload" src={Button} />
-              <p className="publish__button-title">PUBLISH</p>
-            </button>
+            <Link to="/publish">
+              <button className="publish__button-box">
+                <img
+                  className="publish__button-icon"
+                  alt="upload"
+                  src={Button}
+                />
+                <p className="publish__button-title">PUBLISH</p>
+              </button>
+            </Link>
           </div>
         </div>
       </section>
