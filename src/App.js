@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //scss
-//import "./app.scss";
+import "./app.scss";
 
 import Home from "./page/home/Home";
 import Upload from "./page/videoUpload/VideoUpload";

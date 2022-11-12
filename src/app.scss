@@ -2,6 +2,7 @@
 @use "./styles/partials/fonts";
 @use "./styles/partials/mixin" as mixin;
 @use "./styles/partials/breakpoints" as breakpoint;
+@use "./styles/partials/colors" as *;
 
 html,
 body {
@@ -19,6 +20,11 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text-pri;
 }
 
 //Breakpoints for desktop

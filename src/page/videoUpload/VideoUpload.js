@@ -14,11 +14,7 @@ function VideoUpload() {
         <div className="upload__container">
           <div className="upload__hero">
             <p className="upload__hero-title">VIDEO THUMBNAIL</p>
-            <img
-              src={"../../assets/Images/Upload-video-preview.jpg"}
-              alt="video"
-              className="upload__hero-img"
-            />
+            {/* <img src={Btn} alt="video" className="upload__hero-img" /> */}
           </div>
           <div className="upload__details">
             <div className="upload__details-title">
