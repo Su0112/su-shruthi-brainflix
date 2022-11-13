@@ -31,11 +31,11 @@ const Header = (props) => {
         <div className="header__container__btn">
           <Link to="/upload">
             <button className="header__container__btns" href="">
-              <img
+              {/* <img
                 className="header__container__btns-img"
                 alt="upload"
                 src={Button}
-              />
+              /> */}
               UPLOAD
             </button>
           </Link>

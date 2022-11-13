@@ -46,7 +46,7 @@
     &-btn {
       padding: 0.5rem;
       width: 100%;
-      height: 20%;
+      //height: 20%;
       border-radius: 0.4rem;
       border: 1px solid color.$color-activeform-outline-pri;
       background: color.$color-activeform-outline-pri;
@@ -85,7 +85,7 @@
   }
   &__details {
     display: flex;
-    justify-content: space-evenly;
+    //justify-content: space-evenly;
     gap: 1rem;
     padding-top: 0.5rem;
     color: color.$color-text-pri;
@@ -135,14 +135,15 @@
       height: 12%;
       width: 96%;
       &-btn {
-        width: 24%;
+        min-width: 24%;
         border-radius: 0.15rem;
-        position: relative;
-        right: -8rem;
+
+        // position: relative;
+        // right: -8rem;
       }
       &-text {
         height: 26%;
-        width: 145%;
+        //width: 145%;
         padding: 1rem 0 0 1rem;
         margin-bottom: 0;
       }
