@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import Button from "../../assets/Icons/upload.svg";
+import Publish from "../../assets/Icons/publish.svg";
 import { Link } from "react-router-dom";
 import Img from "../../assets/Images/Upload-video-preview.jpg";
+import "./videoupload.scss";
 
 function VideoUpload() {
   return (
@@ -45,22 +46,22 @@ function VideoUpload() {
         <div className="upload__divider"></div>
         {/*border bottom for the container is better than a div*/}
         <div className="publish">
-          <div className="publish__cancel">
-            <button className="publish__cancel-box">
-              <p className="publish__button-title">CANCEL</p>
-            </button>
-          </div>
           <div className="publish__button">
             <Link to="/publish">
               <button className="publish__button-box">
                 <img
                   className="publish__button-icon"
                   alt="upload"
-                  src={Button}
+                  src={Publish}
                 />
                 <p className="publish__button-title">PUBLISH</p>
               </button>
             </Link>
+          </div>
+          <div className="publish__cancel">
+            <button className="publish__cancel-box">
+              <p className="publish__button-title">CANCEL</p>
+            </button>
           </div>
         </div>
       </section>

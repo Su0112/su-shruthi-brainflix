@@ -1,1 +1,50 @@
-       
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as color;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixin" as mixin;
+
+.upload {
+  padding: 1rem;
+  padding-top: 0;
+  border-top: 0.1rem solid color.$color-divider-form-outline-sec;
+  &__title {
+    @include mixin.small-page-header;
+    color: color.$color-text-pri;
+  }
+  &__hero-title {
+    @include mixin.small-section-header;
+    color: color.$color-textlabel-pri;
+  }
+  &__hero-img {
+    width: 100%;
+    border-radius: 0.2rem;
+  }
+  &__details-title-name {
+    @include mixin.small-section-header;
+    color: color.$color-textlabel-pri;
+  }
+  &__details-description-name {
+    @include mixin.small-section-header;
+    color: color.$color-textlabel-pri;
+  }
+}
+.publish {
+  &__button-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5.25rem;
+    border: 1px solid color.$color-activeform-outline-pri;
+    background: color.$color-activeform-outline-pri;
+    color: color.$color-plain-pri;
+    border-radius: 0.25rem;
+  }
+  &__cancel-box {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: color.$color-activeform-outline-pri;
+  }
+}
