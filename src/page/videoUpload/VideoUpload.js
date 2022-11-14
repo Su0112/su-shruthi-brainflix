@@ -21,13 +21,13 @@ function VideoUpload() {
           <div className="upload__details">
             <div className="upload__details-title">
               <p className="upload__details-title-name">TITLE YOUR VIDEO</p>
-              <textarea
+              <input
                 type="text"
                 className="upload__details-title-fill"
                 name="videoName"
                 placeholder=" Add a title to your video"
                 required
-              ></textarea>
+              />
             </div>
             <div className="upload__details-description">
               <p className="upload__details-description-name">
@@ -44,7 +44,7 @@ function VideoUpload() {
           </div>
         </div>
         <div className="upload__divider"></div>
-        {/*border bottom for the container is better than a div*/}
+
         <div className="publish">
           <div className="publish__button">
             <Link to="/publish">

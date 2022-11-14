@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 //import { useParams } from "react-router-dom";
 import axios from "axios";
 //scss
-//import "./home.scss";
+import "./home.scss";
 // components
 import Header from "../../components/header/Header";
 import Herovideo from "../../components/herovideo/Herovideo";

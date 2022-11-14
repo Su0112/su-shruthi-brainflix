@@ -32,24 +32,29 @@
     margin-bottom: 0.2rem;
   }
   &__details-title-fill {
+    font-family: "Avenir";
     border-radius: 0.15rem;
     border: 1px solid color.$color-divider-form-outline-sec;
     background-color: color.$color-formfield-background-sec;
     color: color.$color-text-pri;
-    resize: none;
     padding-top: 0.75rem;
+    width: 100%;
+    //resize: none;
   }
   &__details-description-fill {
+    font-family: "Avenir";
+    width: 100%;
     border-radius: 0.15rem;
     border: 1px solid color.$color-divider-form-outline-sec;
     background-color: color.$color-formfield-background-sec;
     color: color.$color-text-pri;
-    resize: none;
     padding-top: 0.75rem;
+    resize: none;
   }
 }
 .publish {
   &__button-box {
+    font-family: "Avenir";
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -61,11 +66,122 @@
     border-radius: 0.25rem;
   }
   &__cancel-box {
+    font-family: "Avenir";
     margin-top: 1rem;
     width: 100%;
     display: flex;
     justify-content: center;
     color: color.$color-activeform-outline-pri;
     border: none;
+  }
+}
+//Breakpoints for tablet
+@include breakpoint.medium {
+  .upload {
+    font-family: "Avenir";
+    padding: 2.5rem;
+    padding-top: 0;
+    border-top: 0.1rem solid color.$color-divider-form-outline-sec;
+
+    &__title {
+      @include mixin.med-lar-page-header;
+      border-bottom: 0.1rem solid color.$color-divider-form-outline-sec;
+      padding-bottom: 1rem;
+      padding-top: 0.5rem;
+    }
+    &__hero-title {
+      @include mixin.med-lar-section-header;
+      color: color.$color-textlabel-pri;
+    }
+    &__hero-img {
+      width: 50%;
+    }
+    &__details-title-name {
+      @include mixin.med-lar-section-header;
+      color: color.$color-textlabel-pri;
+    }
+    &__details-description-name {
+      @include mixin.med-lar-section-header;
+      color: color.$color-textlabel-pri;
+    }
+    &__details {
+      border-bottom: 0.1rem solid color.$color-divider-form-outline-sec;
+      padding-bottom: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &__details-description-fill {
+      width: 100%;
+      height: 8.625rem;
+    }
+  }
+  .publish {
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 4rem;
+    &__button-box {
+      width: 100%;
+      gap: 2rem;
+      padding-right: 3rem;
+    }
+    &__cancel-box {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+}
+
+//Breakpoints for desktop
+@include breakpoint.large {
+  .upload {
+    font-family: "Avenir";
+    padding: 10rem;
+    padding-top: 1rem;
+    border-top: 0.1rem solid color.$color-divider-form-outline-sec;
+    &__title {
+      border-bottom: 0.1rem solid color.$color-divider-form-outline-sec;
+      padding-bottom: 1rem;
+      padding-top: 0.5rem;
+    }
+    &__hero-img {
+      width: 100%;
+      object-fit: cover;
+    }
+    &__container {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+      border-bottom: 0.1rem solid color.$color-divider-form-outline-sec;
+      padding-bottom: 0.75rem;
+      gap: 1rem;
+    }
+    &__hero {
+      width: 30.9375rem;
+    }
+    &__details {
+      width: 100%;
+    }
+    &__details-description-fill {
+      height: 6.25rem;
+    }
+  }
+  .publish {
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 4rem;
+    &__button-box {
+      width: 100%;
+      gap: 2rem;
+      padding-right: 3rem;
+    }
+    &__cancel-box {
+      width: 100%;
+      margin-top: 0;
+    }
   }
 }
