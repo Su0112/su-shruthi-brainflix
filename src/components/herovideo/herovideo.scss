@@ -18,18 +18,16 @@
 @include breakpoint.medium {
   .hero {
     width: 100vw;
-    height: 54vh;
     &__video {
       max-height: 100%;
     }
   }
 }
-//desktop
-//Breakpoints for tablet
+
+//Breakpoints for desktop
 @include breakpoint.large {
   .hero {
     width: 100vw;
-    height: 64vh;
 
     &__video {
       max-height: 100%;

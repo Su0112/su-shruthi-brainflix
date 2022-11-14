@@ -5,18 +5,21 @@ import Button from "../../assets/Icons/upload.svg";
 import "./header.scss";
 //in-built imports
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   return (
     <section className="header1">
       <header className="header">
-        <div className="header__container">
-          <img
-            className="header__container__logo"
-            src={Logo}
-            alt="BrainFlix Logo"
-          />
-        </div>
+        <Link to="/">
+          <div className="header__container">
+            <img
+              className="header__container__logo"
+              src={Logo}
+              alt="BrainFlix Logo"
+            />
+          </div>
+        </Link>
         <div className="header__search">
           <input
             className="header__search-box"
@@ -26,14 +29,16 @@ const Header = (props) => {
           <div className="header__avatar"></div>
         </div>
         <div className="header__container__btn">
-          <button className="header__container__btns" href="">
-            <img
-              className="header__container__btns-img"
-              alt="upload"
-              src={Button}
-            />
-            UPLOAD
-          </button>
+          <Link to="/upload">
+            <button className="header__container__btns" href="">
+              {/* <img
+                className="header__container__btns-img"
+                alt="upload"
+                src={Button}
+              /> */}
+              UPLOAD
+            </button>
+          </Link>
           <div className="header__avatar-upload"></div>
         </div>
       </header>
