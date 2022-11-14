@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import Header from "../../components/header/Header";
+import "./publishPage.scss";
 
 function PublishPage() {
   const navigate = useNavigate();
@@ -16,10 +17,8 @@ function PublishPage() {
   return (
     <div>
       <Header />
-      <div className="publish">
-        <h1 className="publish_header">
-          Yet you still clicked on it. Mission accomplished.
-        </h1>
+      <div className="publish__page">
+        <h1 className="publish__page-header">Success!</h1>
       </div>
     </div>
   );

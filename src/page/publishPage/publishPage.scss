@@ -1,4 +1,24 @@
 @use "../../styles/partials/breakpoints" as breakpoint;
-@use "../../styles/partials/colors" as color;
-@use "../../styles/partials/fonts" as *;
-@use "../../styles/partials/mixin" as mixin;
+
+.publish__page {
+  padding: 1rem;
+
+  width: 100%;
+  &-header {
+    padding-top: 0.75rem;
+    border-radius: 2rem;
+    text-align: center;
+    width: 100%;
+    min-height: 3rem;
+    background: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      cyan,
+      blue,
+      violet
+    );
+  }
+}

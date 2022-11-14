@@ -4,6 +4,7 @@
 @use "../../styles/partials/mixin" as mixin;
 
 .upload {
+  font-family: "Avenir";
   padding: 1rem;
   padding-top: 0;
   border-top: 0.1rem solid color.$color-divider-form-outline-sec;
@@ -14,18 +15,37 @@
   &__hero-title {
     @include mixin.small-section-header;
     color: color.$color-textlabel-pri;
+    margin-bottom: 0.2rem;
   }
   &__hero-img {
     width: 100%;
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
   }
   &__details-title-name {
     @include mixin.small-section-header;
     color: color.$color-textlabel-pri;
+    margin-bottom: 0.2rem;
   }
   &__details-description-name {
     @include mixin.small-section-header;
     color: color.$color-textlabel-pri;
+    margin-bottom: 0.2rem;
+  }
+  &__details-title-fill {
+    border-radius: 0.15rem;
+    border: 1px solid color.$color-divider-form-outline-sec;
+    background-color: color.$color-formfield-background-sec;
+    color: color.$color-text-pri;
+    resize: none;
+    padding-top: 0.75rem;
+  }
+  &__details-description-fill {
+    border-radius: 0.15rem;
+    border: 1px solid color.$color-divider-form-outline-sec;
+    background-color: color.$color-formfield-background-sec;
+    color: color.$color-text-pri;
+    resize: none;
+    padding-top: 0.75rem;
   }
 }
 .publish {
@@ -46,5 +66,6 @@
     display: flex;
     justify-content: center;
     color: color.$color-activeform-outline-pri;
+    border: none;
   }
 }

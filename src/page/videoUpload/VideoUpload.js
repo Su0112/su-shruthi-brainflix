@@ -25,7 +25,7 @@ function VideoUpload() {
                 type="text"
                 className="upload__details-title-fill"
                 name="videoName"
-                placeholder="Add a title to your video"
+                placeholder=" Add a title to your video"
                 required
               ></textarea>
             </div>
@@ -37,7 +37,7 @@ function VideoUpload() {
                 type="text"
                 className="upload__details-description-fill"
                 name="videoName"
-                placeholder="Add a description to your video"
+                placeholder=" Add a description to your video"
                 required
               ></textarea>
             </div>
