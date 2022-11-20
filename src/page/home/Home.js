@@ -64,7 +64,7 @@ function Home() {
               videoDetails={videoDetails}
               currentId={currentId}
               handleClick={handleClick}
-              setCurrentId={setCurrentId}
+              //setCurrentId={setCurrentId}
             />
             <Commentsform videoDetails={videoDetails} />
           </section>

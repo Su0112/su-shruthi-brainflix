@@ -8,13 +8,13 @@ export default function VideoHeader({
   videoDetails,
   currentId,
   handleClick,
-  setCurrentId,
+  //setCurrentId,
 }) {
   const params = useParams();
   const videoId = params.videoId ? params.videoId : currentId;
   useEffect(() => {
     handleClick(videoId);
-    setCurrentId(videoId);
+    //setCurrentId(videoId);
   }, [videoId]);
 
   return (
