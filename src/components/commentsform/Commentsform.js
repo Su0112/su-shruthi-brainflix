@@ -4,7 +4,6 @@ import Btn from "../../assets/Icons/add_comment.svg";
 import { convertTime } from "../../utils/Utils";
 //number of comments changes depending on the videos
 export default function Commentsform({ videoDetails }) {
-  //console.log(videoDetails);
   return (
     <section className="form1">
       <p className="form__tag">{videoDetails?.comments.length} Comments</p>
@@ -59,5 +58,3 @@ export default function Commentsform({ videoDetails }) {
     </section>
   );
 }
-
-//useEffect
