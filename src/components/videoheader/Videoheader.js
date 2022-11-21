@@ -3,11 +3,18 @@ import "./videoheader.scss";
 import { convertTime } from "../../utils/Utils";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-export default function VideoHeader({ videoDetails, currentId, handleClick }) {
+
+export default function VideoHeader({
+  videoDetails,
+  currentId,
+  handleClick,
+  //setCurrentId,
+}) {
   const params = useParams();
   const videoId = params.videoId ? params.videoId : currentId;
   useEffect(() => {
     handleClick(videoId);
+    //setCurrentId(videoId);
   }, [videoId]);
 
   return (

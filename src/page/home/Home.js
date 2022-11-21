@@ -20,8 +20,7 @@ function Home() {
   const [videoDetails, setVideoDetails] = useState();
   //`${url}+ "/videos"+ "?api_key="+ ${apiKey}`
 
-  const videoClicked = (videoId) =>
-    `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=fff0792b-b4bc-4557-9ae5-25025cd2533e`;
+  const videoClicked = (videoId) => `http://localhost:8080/videos/${videoId}`;
 
   const handleClick = async (videoId) => {
     const { data } = await axios.get(videoClicked(videoId));
@@ -32,7 +31,7 @@ function Home() {
     const fetchVideoDetails = async () => {
       try {
         const { data } = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${currentId}?api_key=fff0792b-b4bc-4557-9ae5-25025cd2533e`
+          `http://localhost:8080/videos/${currentId}`
         );
         setVideoDetails(data);
         console.log(data);
@@ -45,9 +44,7 @@ function Home() {
   useEffect(() => {
     const fetchVideo = async () => {
       try {
-        const { data } = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/?api_key=fff0792b-b4bc-4557-9ae5-25025cd2533e`
-        );
+        const { data } = await axios.get(`http://localhost:8080/videos/`);
         setVideos(data);
         //console.log(data);
       } catch (error) {
@@ -67,6 +64,7 @@ function Home() {
               videoDetails={videoDetails}
               currentId={currentId}
               handleClick={handleClick}
+              //setCurrentId={setCurrentId}
             />
             <Commentsform videoDetails={videoDetails} />
           </section>
